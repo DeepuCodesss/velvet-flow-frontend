@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VELVET FLOW — Artisan Chocolates</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="cur" id="cur"></div>
+<div class="cur-dot" id="curDot"></div>
+<div id="pts"></div>
+
+<!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+<nav>
+  <div class="logo" onclick="scrollTo(0,0)">VELVET FLOW</div>
+  <ul class="nav-links">
+    <li><a href="#products" onclick="go('#products',event)">Collection</a></li>
+    <li><a href="#featured" onclick="go('#featured',event)">Story</a></li>
+    <li><a href="#reviews" onclick="go('#reviews',event)">Reviews</a></li>
+    <li><a href="#newsletter" onclick="go('#newsletter',event)">Newsletter</a></li>
+  </ul>
+  <button class="cart-btn" onclick="openM('mCart')">
+    🛒 Cart <span class="badge" id="badge">0</span>
+  </button>
+</nav>
+
+<!-- ═══════════════════════════ HERO ══════════════════════════ -->
+<section class="hero">
+  <div class="hcircle"></div>
+  <div class="hcircle"></div>
+  <div class="fchoc" style="top:15%;left:8%;animation-duration:6s">🍫</div>
+  <div class="fchoc" style="top:20%;right:10%;animation-duration:7s;animation-delay:-2s;font-size:2rem">🍬</div>
+  <div class="fchoc" style="bottom:20%;left:12%;animation-duration:8s;animation-delay:-4s;font-size:2.5rem">🍭</div>
+  <div class="fchoc" style="bottom:25%;right:8%;animation-duration:6.5s;animation-delay:-1s">🍫</div>
+  <div class="fchoc" style="top:50%;left:3%;animation-duration:9s;animation-delay:-3s;font-size:1.8rem">✨</div>
+  <div class="fchoc" style="top:35%;right:4%;animation-duration:7.5s;animation-delay:-5s;font-size:1.8rem">✨</div>
+  <div class="hcontent">
+    <div class="hbadge">✦ Est. 2010 · Premium Artisan Craft ✦</div>
+    <h1 class="htitle">Velvet<br><em>Smooth</em><br>Flow</h1>
+    <p class="hsub">Handcrafted chocolates made with love &amp; finest ingredients</p>
+    <div class="hbtns">
+      <button class="btn" onclick="go('#products',event)"><span>Explore Collection</span></button>
+      <button class="btn-o" onclick="openM('mStory')">Our Story</button>
+    </div>
+  </div>
+  <div class="scroll-hint" onclick="go('#products',event)">
+    <span>Scroll</span><div class="sline"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ MARQUEE ══════════════════════════ -->
+<div class="mq">
+  <div class="mq-track">
+    <span>DARK CHOCOLATE</span><span class="sep">✦</span>
+    <span>MILK CHOCOLATE</span><span class="sep">✦</span>
+    <span>WHITE CHOCOLATE</span><span class="sep">✦</span>
+    <span>TRUFFLE COLLECTION</span><span class="sep">✦</span>
+    <span>GIFT BOXES</span><span class="sep">✦</span>
+    <span>SEASONAL EDITIONS</span><span class="sep">✦</span>
+    <span>VEGAN RANGE</span><span class="sep">✦</span>
+    <span>DARK CHOCOLATE</span><span class="sep">✦</span>
+    <span>MILK CHOCOLATE</span><span class="sep">✦</span>
+    <span>WHITE CHOCOLATE</span><span class="sep">✦</span>
+    <span>TRUFFLE COLLECTION</span><span class="sep">✦</span>
+    <span>GIFT BOXES</span><span class="sep">✦</span>
+    <span>SEASONAL EDITIONS</span><span class="sep">✦</span>
+    <span>VEGAN RANGE</span><span class="sep">✦</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════ PRODUCTS ═════════════════════════ -->
+<section class="products" id="products">
+  <div style="text-align:center">
+    <div class="slabel rv">Our Collection</div>
+    <h2 class="stitle rv">Crafted for Chocolate Lovers</h2>
+  </div>
+  <div class="grid" id="pgrid"></div>
+</section>
+
+<!-- ═══════════════════════ FEATURED ═════════════════════════ -->
+<section class="feat" id="featured">
+  <div class="feat-inner">
+    <div class="feat-vis">
+      <div class="ring"><div class="rdot"></div></div>
+      <div class="ring"><div class="rdot"></div></div>
+      <div class="ring"><div class="rdot"></div></div>
+      <div class="orb">🍫</div>
+    </div>
+    <div class="feat-txt rv">
+      <div class="slabel" style="justify-content:flex-start">Our Story</div>
+      <h2>Made with <em>Passion</em> &amp; Pure Cocoa</h2>
+      <p>Every VELVET FLOW creation begins with premium cacao beans sourced directly from sustainable farms. Our master chocolatiers blend tradition with innovation to craft pieces that are more than just sweets — they are experiences.</p>
+      <div class="stats">
+        <div><span class="stat-num" id="s1">0</span><span class="stat-lbl">Flavors</span></div>
+        <div><span class="stat-num" id="s2">0</span><span class="stat-lbl">Customers</span></div>
+        <div><span class="stat-num" id="s3">0</span><span class="stat-lbl">Awards</span></div>
+      </div>
+      <button class="btn" onclick="openM('mStory')"><span>Discover Our Story</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ REVIEWS ══════════════════════════ -->
+<section class="reviews" id="reviews">
+  <div class="slabel rv" style="justify-content:center">What People Say</div>
+  <h2 class="stitle rv">Loved by Chocoholics</h2>
+  <div class="rev-grid rv">
+    <div class="rcard"><div class="stars">★★★★★</div><p class="rtext">The most divine chocolate I've ever tasted. The dark truffle collection is absolutely otherworldly. I've ordered three times already!</p><div class="rauthor">— Sophia Laurent</div></div>
+    <div class="rcard" style="margin-top:20px"><div class="stars">★★★★★</div><p class="rtext">VELVET FLOW is a revelation. The packaging is stunning and the taste is even better. Perfect for gifting or indulging yourself.</p><div class="rauthor">— Marcus Chen</div></div>
+    <div class="rcard"><div class="stars">★★★★★</div><p class="rtext">I ordered the seasonal box and was blown away. Each piece is a work of art. Worth every penny and then some.</p><div class="rauthor">— Isabelle Morel</div></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ NEWSLETTER ═══════════════════════ -->
+<!-- Netlify Forms — submissions auto-captured in Netlify dashboard -->
+<section class="nl" id="newsletter">
+  <h2 class="rv">Sweet Updates &amp; Offers</h2>
+  <p class="rv">Join our chocolate lovers community and never miss a new flavor drop</p>
+  <form class="nl-form rv" name="newsletter" method="POST" data-netlify="true" onsubmit="handleNL(event)">
+    <input type="hidden" name="form-name" value="newsletter">
+    <input class="nl-input" id="nlEmail" name="email" type="email" placeholder="your@email.com" required>
+    <button class="nl-btn" type="submit">Subscribe</button>
+  </form>
+</section>
+
+<!-- ═══════════════════════ FOOTER ════════════════════════════ -->
+<footer>
+  <div class="flogo">VELVET FLOW</div>
+  <div class="fcopy">© 2026 VELVET FLOW. All rights reserved.</div>
+  <div class="flinks">
+    <a href="#" onclick="openM('mPrivacy');return false">Privacy</a>
+    <a href="#" onclick="openM('mTerms');return false">Terms</a>
+    <a href="#" onclick="openM('mContact');return false">Contact</a>
+    <a href="#" onclick="openM('mInsta');return false">Instagram</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<!-- ══════════════════════════ MODALS ════════════════════════ -->
+
+<!-- CART -->
+<div class="moverlay" id="mCart" onclick="outsideClose(event,'mCart')">
+  <div class="modal">
+    <button class="mclose" onclick="closeM('mCart')">✕</button>
+    <div class="mtitle">🛒 Your Cart</div>
+    <div class="msub">VELVET FLOW</div>
+    <div class="mline"></div>
+    <div id="cartBody"></div>
+    <div id="cartFoot" style="display:none">
+      <div class="ctotal-row">Total: <span id="ctotal">₹0</span></div>
+      <button class="mfull" onclick="openCheckout()">Proceed to Payment →</button>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKOUT -->
+<div class="moverlay" id="mCheckout" onclick="outsideClose(event,'mCheckout')">
+  <div class="modal">
+    <button class="mclose" onclick="closeM('mCheckout')">✕</button>
+    <div class="mtitle">📦 Checkout</div>
+    <div class="msub">Fill details &amp; pay securely via Razorpay</div>
+    <div class="mline"></div>
+    <div class="cust-form">
+      <input class="cinput" id="coName"  type="text"  placeholder="Full Name *" required>
+      <input class="cinput" id="coEmail" type="email" placeholder="Email Address *" required>
+      <input class="cinput" id="coPhone" type="tel"   placeholder="Phone Number *" required>
+      <textarea class="cinput" id="coAddr" rows="3"   placeholder="Delivery Address *" required></textarea>
+      <input class="cinput" id="coCity"  type="text"  placeholder="City *" required>
+      <input class="cinput" id="coPin"   type="text"  placeholder="Pincode *" required>
+    </div>
+    <div class="mline"></div>
+    <div id="orderSummaryBox"></div>
+    <button class="mfull" id="payBtn" onclick="startPayment()">
+      <span id="payBtnTxt">Pay with Razorpay 🔒</span>
+    </button>
+    <p style="text-align:center;margin-top:12px;font-size:.8rem;color:rgba(253,243,227,.4)">
+      Secured by Razorpay · UPI / Cards / Net Banking / Wallets
+    </p>
+  </div>
+</div>
+
+<!-- ORDER SUCCESS -->
+<div class="moverlay" id="mOrder" onclick="outsideClose(event,'mOrder')">
+  <div class="modal" style="text-align:center">
+    <button class="mclose" onclick="closeM('mOrder')">✕</button>
+    <div class="sucanim"><span class="sucemoji">🎉</span></div>
+    <div class="mtitle" style="text-align:center">Order Confirmed!</div>
+    <div class="msub"  style="text-align:center">Thank you for choosing VELVET FLOW</div>
+    <div class="mline"></div>
+    <div class="mbody" style="text-align:center">
+      <p>Your chocolates are being lovingly packed and will be dispatched within 24 hours. A confirmation email has been sent! 🍫</p>
+      <br>
+      <p style="color:var(--gold);font-family:'Bebas Neue',sans-serif;font-size:1.4rem" id="orderNum">Order #VF-00000</p>
+    </div>
+    <br>
+    <button class="mfull" onclick="closeM('mOrder')">Continue Shopping →</button>
+  </div>
+</div>
+
+<!-- STORY -->
+<div class="moverlay" id="mStory" onclick="outsideClose(event,'mStory')">
+  <div class="modal">
+    <button class="mclose" onclick="closeM('mStory')">✕</button>
+    <div class="mtitle">Our Story</div>
+    <div class="msub">From Bean to Bar — Crafted with Love</div>
+    <div class="mline"></div>
+    <div class="mbody">
+      <p>VELVET FLOW was born in 2010 from a simple obsession: finding the perfect chocolate. Our founder travelled across Belgium, Switzerland and Ecuador sourcing the world's finest cacao, learning centuries-old techniques from master chocolatiers.</p>
+      <br>
+      <p>Today, every piece we craft is a tribute to that journey — made by hand, infused with care, and delivered to your door with uncompromising quality. We believe chocolate is not just a treat; it's an emotion.</p>
+      <div class="mline"></div>
+      <div class="sgrid">
+        <div class="sfact"><div class="sfnum">48+</div><div class="sflbl">Unique Flavors</div></div>
+        <div class="sfact"><div class="sfnum">12K+</div><div class="sflbl">Happy Customers</div></div>
+        <div class="sfact"><div class="sfnum">23</div><div class="sflbl">Awards Won</div></div>
+        <div class="sfact"><div class="sfnum">100%</div><div class="sflbl">Handcrafted</div></div>
+      </div>
+      <div class="mline"></div>
+      <p>We partner only with Rainforest Alliance certified farms. Every box you buy plants a cacao tree. 🌱</p>
+    </div>
+    <br>
+    <button class="mfull" onclick="closeM('mStory');go('#products',null)">Shop the Collection →</button>
+  </div>
+</div>
+
+<!-- CONTACT — Netlify Form -->
+<div class="moverlay" id="mContact" onclick="outsideClose(event,'mContact')">
+  <div class="modal">
+    <button class="mclose" onclick="closeM('mContact')">✕</button>
+    <div class="mtitle">Contact Us</div>
+    <div class="msub">We'd love to hear from you 🍫</div>
+    <div class="mline"></div>
+    <form class="cust-form" name="contact" method="POST" data-netlify="true" onsubmit="handleContact(event)">
+      <input type="hidden" name="form-name" value="contact">
+      <input class="cinput" name="name"    type="text"  placeholder="Your Name *" required>
+      <input class="cinput" name="email"   type="email" placeholder="Your Email *" required>
+      <select class="cinput" name="subject">
+        <option value="">Select Topic...</option>
+        <option>Order Enquiry</option>
+        <option>Custom Gift Box</option>
+        <option>Wholesale</option>
+        <option>Feedback</option>
+        <option>Other</option>
+      </select>
+      <textarea class="cinput" name="message" rows="5" placeholder="Your message... *" required></textarea>
+      <button class="mfull" type="submit" style="margin-top:0">Send Message →</button>
+    </form>
+    <div class="mline"></div>
+    <div class="mbody" style="display:flex;gap:20px;flex-wrap:wrap;font-size:.9rem">
+      <span>📧 hello@velvetflow.com</span>
+      <span>📞 +91 98765 43210</span>
+      <span>📍 New Delhi, India</span>
+    </div>
+  </div>
+</div>
+
+<!-- PRIVACY -->
+<div class="moverlay" id="mPrivacy" onclick="outsideClose(event,'mPrivacy')">
+  <div class="modal">
+    <button class="mclose" onclick="closeM('mPrivacy')">✕</button>
+    <div class="mtitle">Privacy Policy</div>
+    <div class="msub">Last updated: March 2026</div>
+    <div class="mline"></div>
+    <div class="mbody">
+      <div class="psec"><h3>Information We Collect</h3><p>We collect your name, email, shipping address and payment info when you place an order. Anonymous browsing data helps us improve the site.</p></div>
+      <div class="psec"><h3>How We Use It</h3><p>Only to process orders, send shipping updates and — with consent — our newsletter with exclusive offers.</p></div>
+      <div class="psec"><h3>Data Security</h3><p>All transactions are SSL encrypted. We never sell your data to third parties. Payments are processed entirely by Razorpay — we never store card details.</p></div>
+      <div class="psec"><h3>Cookies</h3><p>Essential cookies keep your cart alive. Analytics cookies are opt-in.</p></div>
+      <div class="psec"><h3>Contact</h3><p>privacy@velvetflow.com — we respond within 48 hours.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- TERMS -->
+<div class="moverlay" id="mTerms" onclick="outsideClose(event,'mTerms')">
+  <div class="modal">
+    <button class="mclose" onclick="closeM('mTerms')">✕</button>
+    <div class="mtitle">Terms &amp; Conditions</div>
+    <div class="msub">Please read before indulging 🍫</div>
+    <div class="mline"></div>
+    <div class="mbody">
+      <div class="psec"><h3>Orders &amp; Payments</h3><p>All prices are in INR. Orders confirmed on payment. We accept UPI, cards, net banking via Razorpay.</p></div>
+      <div class="psec"><h3>Shipping</h3><p>Pan-India delivery in 2–5 business days. Insulated packaging during summer at no extra charge.</p></div>
+      <div class="psec"><h3>Returns &amp; Refunds</h3><p>Full refund or replacement within 7 days of delivery for damaged goods. Email us with a photo.</p></div>
+      <div class="psec"><h3>Allergens</h3><p>Products may contain milk, nuts, soy and gluten. Check labels before ordering.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- INSTAGRAM -->
+<div class="moverlay" id="mInsta" onclick="outsideClose(event,'mInsta')">
+  <div class="modal">
+    <button class="mclose" onclick="closeM('mInsta')">✕</button>
+    <div class="mtitle">@velvetflow</div>
+    <div class="msub">Follow us for daily chocolate inspiration ✨</div>
+    <div class="mline"></div>
+    <div class="igrid">
+      <div class="iitem">🍫</div><div class="iitem">🌰</div><div class="iitem">🍭</div>
+      <div class="iitem">🎁</div><div class="iitem">🌹</div><div class="iitem">🍮</div>
+      <div class="iitem">✨</div><div class="iitem">🌱</div><div class="iitem">🍬</div>
+    </div>
+    <br>
+    <button class="mfull" onclick="toast('Opening Instagram... 📸');closeM('mInsta')">Follow on Instagram →</button>
+  </div>
+</div>
+
+<!-- Razorpay SDK -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
